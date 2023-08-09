@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+:root {
+    /*Colors*/
+    --Cyan: hsl(180, 66%, 49%);
+    --Dark-violent: hsl(257, 27%, 26%);
+    --Red: hsl(0, 87%, 67%);
+    --Gray: hsl(0, 0%, 75%);
+    --Grayish-violent: hsl(257, 7%, 63%);
+    --Very-dark-blue: hsl(255, 11%, 22%);
+    --Very-dark-violent: hsl(260, 8%, 14%);
+
+    /*Typography*/
+    --font-size: 18px;
+    --font-family: 'Poppins', sans-serif;
+    --font-weight-regular: 500;
+    --font-weight-bold: 700;
+
+    /*Screen*/
+    --max-width: 1100px;
+    --min-width: 375px;
+}
+
+:is(*, *::after, *::before) {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    min-width: 100vw;
+    min-height: 100vh;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    margin: 0 auto;
+}
+
+
+
+/**********************  button  ***********************/
+.button-temp {
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 25px;
+    transition: background .5s, color .5s;
+}
+
+.cyan-button {
+    background-color: var(--Cyan);
+    color: #fff;
+}
+
+.cyan-button:hover {
+    background-color:hsl(180, 80%, 62%);
+}
+
+.gray-button {
+    color: var(--Grayish-violent);
+}
+
+.gray-button:hover {
+    color: var(--Dark-violent);
+}
+/*******************************************************/
+
+
+
+/**********************  header  ***********************/
+.header-page {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.header-page > nav {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 45% 1fr 20%;
+    grid-template-rows: 100%;
+}
+
+.header-page > nav > ul {
+    display: grid;
+    grid-template-columns: 30% repeat(3, 1fr);
+    grid-template-rows: 100%;
+    align-items: center;
+}
+
+.header-page > nav > ul > li {
+    list-style: none;
+}
+
+.header-page > nav > ul > li > a {
+    text-decoration: none;
+    font-size: 90%;
+    font-weight: var(--font-weight-bold);
+    color: var(--Grayish-violent);
+    transition: color .5s;
+}
+
+.header-page > nav > ul > li > a:hover {
+    color: var(--Dark-violent);
+}
+
+.header-page > nav > ul > li > a > img {
+    padding-top: 10px;
+}
+
+.header-page > nav > div {
+    grid-column: 3 / 4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100%;
+}
+
+.header-page > nav > div > a {
+    align-self: center;
+    justify-self: center;
+    font-size: 90%;
+}
+
+.header-page > h1 {
+    margin-top: 100px;
+    font-size: 350%;
+    font-weight: var(--font-weight-bold);
+    line-height: 80px;
+    color: var(--Very-dark-violent);
+    width: 500px;
+}
+
+.header-page > p {
+    width: 500px;
+    line-height: 30px;
+    color: var(--Grayish-violent);
+}
+
+.header-page > a {
+    margin-top: 50px;
+    border-radius: 50px;
+    padding: 15px 40px;
+}
+
+.header-page > img {
+    position: absolute;
+    top: 140px;
+    left: 520px;
+}
+/*******************************************************/
+/**********************  input  ************************/
+.shortly-input {
+    width: 100%;
+    height: 150px;
+    background-color: var(--Dark-violent);
+    background-image: url(../images/bg-shorten-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+}
+
+.shortly-input > div {
+    width: 90%;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 100%;
+    gap: 15px;
+}
+
+:is(.shortly-input > div > input, .shortly-input > div > button) {
+    border-radius: 10px;
+    border: none;
+    font-weight: var(--font-weight-bold);
+    font-size: 100%;
+}
+
+.shortly-input > div > input {
+    padding-left: 20px;
+}
+/*******************************************************/
+/***********************  rep  *************************/
+.shortly-rep {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 60% 25% 15%;
+    grid-template-rows: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#link {
+    font-size: 110%;
+    margin: auto 0;
+    margin-left: 55px;
+}
+
+#rep {
+    font-size: 110%;
+    margin: auto 0;
+    color: var(--Cyan);
+}
+
+.shortly-rep > div {
+    align-self: center;
+    justify-self: center;
+    border-radius: 10px;
+    
+}
+/*******************************************************/
