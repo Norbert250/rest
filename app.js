@@ -1,4 +1,4 @@
-'use strict';
+
 
 const inputForm = document.querySelector('.shortly-input > div > input');
 const shortenBtn = document.querySelector('.shortly-input > div > button');
